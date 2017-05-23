@@ -6,6 +6,8 @@ var test = {};
 
 (function(obj) {
 
+  obj.divId = 0
+
   obj.isTrue = function() {
     result(obj.value)
   },
@@ -16,6 +18,13 @@ var test = {};
 
   obj.isContain = function(value2) {
       result(obj.value.includes(value2))
+  },
+
+  obj.suiteDescription = function(desc) {
+    obj.divId += 1
+    var describeTitle = document.getElementById("div1")
+    describeTitle.innerHTML += "<div id=" + test.divId +"><h4>" + desc + "</h4></div>"
+
   }
 
   function result(assertion) {
@@ -24,19 +33,9 @@ var test = {};
   }
 
   function printTestResult(result) {
-    var color = (result === "Pass") ? "green" : "red"
-    console.log(obj.description)
-    // var node = document.createTextNode(`${result}: ${obj.description}`)
-    // var para = document.createElement("p")
-    // // para.style.getElementByTagName("p")[0].setAttribute("class", "pass");
-    // para.style.color = color
-    // para.appendChild(node);
-    // parentElement.appendChild(para);
-    // document.createElement("div")
-    var describeTitle = document.getElementById("div1")
-    describeTitle.innerHTML = "<div id=testclass>" + obj.suiteDescription + "</div>"
-    var itText = document.getElementById("testclass")
-    itText.innerHTML += "<p class=itdesc>" + obj.description + "</p>"
+    var tickorx = (result === "Pass") ?  "&#10004 " : "&#10008 "
+    var itText = document.getElementById(test.divId)
+    itText.innerHTML += "<li class=" + result +"> " + tickorx + obj.description + "</li>"
   }
 })(test);
 
@@ -51,7 +50,6 @@ function it(testDescription, method) {
 }
 
 function describe(suiteDescription, method) {
-  test.divId
-  test.suiteDescription = suiteDescription
+  test.suiteDescription(suiteDescription)
   method()
 }

@@ -52,7 +52,7 @@ it("bit 2", function() {
   expect("string").isContain("tr")
 });
 it("bit 3", function() {
-  expect("string").isContain("tr")
+  expect("string").isContain("BB")
 });
 });
 
