@@ -1,0 +1,25 @@
+{
+  "name": "notes-pure-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bruxelles86/notes-pure-JS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bruxelles86/notes-pure-JS/issues"
+  },
+  "homepage": "https://github.com/bruxelles86/notes-pure-JS#readme",
+  "dependencies": {
+    "http-server": "^0.10.0"
+  }
+}
