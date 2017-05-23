@@ -1,5 +1,17 @@
 (function(exports) {
-  // 
+  var title = "First note";
+  var text = "A bunch of test sentences.";
+  var note = new Note(title, text);
+
+  function notesHaveTitleProperty() {
+    assert.isTrue((note.title() === "First note"), "title should be 'First note'");
+  };
+
+  function notesHaveTextProperty() {
+    assert.isTrue((note.text() === "A bunch of test sentences."), "text should be 'A bunch of test sentences.'");
+  };
+
+
   // function testIf1Plus1Is2() {
   //   assert.isTrue((1 + 1 === 2), "checks if 1 + 1 equals 2");
   // };
@@ -30,6 +42,8 @@
   // testIf3Equal3();
   // arrayContainElement([1,2,3],3);
   // stringContainString("String", "tr")
+  notesHaveTitleProperty()
+  notesHaveTextProperty()
 })(this);
 
 //
