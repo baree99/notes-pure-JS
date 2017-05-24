@@ -13,5 +13,9 @@ describe('Notes', function() {
       expect(note.text()).isEqualTo("A bunch of test sentences.")
     });
 
+    it('has id', function() {
+      expect(note.id()).isEqualTo(1)
+    });
+
   });
 });
