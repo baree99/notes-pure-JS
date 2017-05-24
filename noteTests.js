@@ -38,21 +38,21 @@
 // testIf1Plus1Is2()
 
 
-describe("method", function() {
-it("yay! it works", function() {
+describe("test1", function() {
+it("'String' contain with a 'tr'", function() {
   expect("string").isContain("tr")
-  it("heloo", function() {
-    expect("string").isContain("tr")
+  it("array contain element", function() {
+    expect([1,2,3]).isContain(2)
   });
 });
 });
 
-describe("the ohter one", function() {
-it("bit 2", function() {
-  expect("string").isContain("tr")
+describe("test2", function() {
+it("2+2 equal 4", function() {
+  expect(2+2).isEqualTo(4)
 });
-it("bit 3", function() {
-  expect("string").isContain("BB")
+it("fails false is not true", function() {
+  expect(false).isTrue()
 });
 });
 
