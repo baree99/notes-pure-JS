@@ -3,14 +3,24 @@
   var text = "A bunch of test sentences.";
   var note = new Note(title, text);
 
-  function notesHaveTitleProperty() {
-    assert.isTrue((note.title() === "First note"), "title should be 'First note'");
-  };
+  // function notesHaveTitleProperty() {
+  //   assert.isTrue((note.title() === "First note"), "title should be 'First note'");
+  // };
+  //
+  // function notesHaveTextProperty() {
+  //   assert.isTrue((note.text() === "A bunch of test sentences."), "text should be 'A bunch of test sentences.'");
+  // };
+  describe('Notes', function() {
 
-  function notesHaveTextProperty() {
-    assert.isTrue((note.text() === "A bunch of test sentences."), "text should be 'A bunch of test sentences.'");
-  };
+    it('has a title', function() {
+      expect(note.title()).isEqualTo("First note")
+    });
 
+    it('has text', function() {
+      expect(note.text()).isEqualTo("A bunch of test sentences.")
+    });
+
+  });
 
   // function testIf1Plus1Is2() {
   //   assert.isTrue((1 + 1 === 2), "checks if 1 + 1 equals 2");
@@ -42,8 +52,8 @@
   // testIf3Equal3();
   // arrayContainElement([1,2,3],3);
   // stringContainString("String", "tr")
-  notesHaveTitleProperty()
-  notesHaveTextProperty()
+  // notesHaveTitleProperty()
+  // notesHaveTextProperty()
 })(this);
 
 //
