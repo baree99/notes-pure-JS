@@ -3,13 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title> Testing localStorage </title>
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   </head>
   <body>
 
     <div class="container" id="div1" >
       <h1 id='hello'>Notekeeper</h1>
-
+      <div id="second">
+        <h1>title</h1>
+        <p>text</p>
+      </div>
+      <div id="first">
       <form id="newNote">
     <div class="form-group">
       <label>Note title</label>
@@ -20,12 +25,14 @@
       <label>Note text</label>
       <textarea class="form-control" id="noteText" rows="10"></textarea>
     </div>
-
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
+</div>
     </div>
-
+    <div id='noteList'>
+    </div>
     <script src="../src/addNotes.js"></script>
     <script src="../src/note.js"></script>
+    <script src="../src/presentNotes.js"></script>
   </body>
 </html>
