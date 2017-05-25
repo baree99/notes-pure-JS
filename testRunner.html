@@ -4,16 +4,32 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="./public/css/main.css">
     <title> Testing framework</title>
+
   </head>
   <body>
+      <form hidden id="newNote">
+    <div class="form-group">
+      <label>Note title</label>
+      <input type="text" class="form-control" id="noteTitle" placeholder="Enter note title">
+    </div>
+
+    <div class="form-group">
+      <label>Note text</label>
+      <textarea class="form-control" id="noteText" rows="10"></textarea>
+    </div>
+
+    <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+      </form>
+
       <h1>Athene&trade;</h1>
       <div id="div1"></div>
 
-
       <script src="athene.js"></script>
-      <script src="./src/note.js"></script>
+      <script src="./public/src/note.js"></script>
+      <script src="./public/src/addNotes.js"></script>
 
 
       <script src="./tests/noteTests.js"></script>
+      <script src="./tests/addNoteTests.js"></script>
   </body>
 </html>

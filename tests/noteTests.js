@@ -1,9 +1,9 @@
-(function(exports) {
+describe('Notes', function() {
   var title = "First note";
   var text = "A bunch of test sentences.";
   var note = new Note(title, text);
 
-  describe('Notes', function() {
+  describe('note', function() {
 
     it('has a title', function() {
       expect(note.title()).isEqualTo("First note")
@@ -14,5 +14,4 @@
     });
 
   });
-
-})(this);
+});
