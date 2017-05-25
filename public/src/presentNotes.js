@@ -8,9 +8,9 @@ function presentNotes() {
     var title = notePad[i]._title;
     var text = notePad[i]._text;
 
-    noteList.innerHTML   +=   '<div>'+
-                              '<a href="#' + i + '"><h6> ' + title + '</h6></a>'+
-                              '</div>';
+    noteList.innerHTML   +=
+                              '<a href="#' + i + '"><h6> ' + title + '</h6></a>'
+                              ;
 
   }
 
@@ -19,7 +19,6 @@ function presentNotes() {
 
 
 makeUrlShowNote();
-console.log(getTextFromStorage());
 
 
 function makeUrlShowNote() {
@@ -47,10 +46,8 @@ function getTextFromStorage() {
 
 function showNote(noteIndex) {
   document.getElementById("titleDisplay").innerHTML = noteIndex;
-  console.log(noteIndex);
-
 }
+
 function showtext(noteIndex) {
   document.getElementById("noteDisplay").innerHTML = noteIndex;
-  console.log(noteIndex);
 }

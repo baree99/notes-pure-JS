@@ -5,10 +5,10 @@ describe('Adding Notes', function() {
   }
 
   it('adds title to localstorage', function() {
-    document.getElementById('noteTitle').value="foo"
-    document.getElementById('noteText').value="bar"
-    document.getElementById('submit').click()
-    expect(localStorage.notePad).isContain("foo")
+    fillIn('noteTitle').with('DOoo');
+    fillIn('noteText').with('Booooo');
+    clickButton('submit');
+    expect(localStorage.notePad).toContain('DOoo');
   });
 
 });

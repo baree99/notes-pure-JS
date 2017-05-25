@@ -7,6 +7,10 @@ var test = {};
 
   obj.divId = 0
 
+  obj.with = function(value2) {
+    document.getElementById(obj.value).value= value2
+  },
+
   obj.isTrue = function() {
     result(obj.value)
   },
@@ -15,7 +19,7 @@ var test = {};
     result(obj.value === value2)
   },
 
-  obj.isContain = function(value2) {
+  obj.toContain = function(value2) {
       result(obj.value.includes(value2))
   },
 
@@ -39,16 +43,25 @@ var test = {};
 })(test);
 
 function expect(value) {
-  test.value = value
-  return test
+  test.value = value;
+  return test;
 }
 
 function it(testDescription, method) {
-  test.description = testDescription
-  method()
+  test.description = testDescription;
+  method();
 }
 
 function describe(suiteDescription, method) {
-  test.suiteDescription(suiteDescription)
-  method()
+  test.suiteDescription(suiteDescription);
+  method();
+}
+
+function fillIn(value) {
+  test.value = value;
+  return test;
+}
+
+function clickButton(button) {
+  document.getElementById(button).click();
 }
