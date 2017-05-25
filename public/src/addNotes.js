@@ -19,7 +19,7 @@ function addNotes(e) {
 
   document.getElementById('newNote').reset();
 
-  presentNotes();
+  // presentNotes();
 
 console.log(note);
 e.preventDefault();
